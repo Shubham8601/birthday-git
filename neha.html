@@ -1,0 +1,430 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For Neha ❤️</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  background: #090615;
+  color: white;
+  font-family: 'Poppins', sans-serif;
+  overflow-x: hidden;
+}
+
+.stars {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background-image:
+    radial-gradient(white 1px, transparent 1px),
+    radial-gradient(#ff9bd2 1px, transparent 1px);
+  background-size: 90px 90px, 140px 140px;
+  background-position: 0 0, 40px 60px;
+  opacity: .35;
+  animation: twinkle 4s infinite alternate;
+  z-index: 0;
+}
+
+@keyframes twinkle {
+  to { opacity: .75; }
+}
+
+section {
+  position: relative;
+  z-index: 1;
+  padding: 90px 20px;
+  text-align: center;
+}
+
+.hero {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background:
+    radial-gradient(ellipse at center,
+    #57205e 0%, #170c2b 45%, #090615 100%);
+}
+
+.small {
+  letter-spacing: 6px;
+  color: #ffb4dd;
+  font-size: 12px;
+  text-transform: uppercase;
+}
+
+.hero h1 {
+  font-family: 'Great Vibes', cursive;
+  font-size: clamp(75px, 15vw, 140px);
+  color: #ffd2ed;
+  text-shadow: 0 0 35px #ff55bc;
+  animation: appear 2s ease;
+}
+
+.hero h2 {
+  font-size: clamp(17px, 4vw, 25px);
+  font-weight: 300;
+  letter-spacing: 4px;
+}
+
+@keyframes appear {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.btn {
+  margin-top: 35px;
+  padding: 15px 32px;
+  background: linear-gradient(90deg,#ff62b2,#b56cff);
+  border: none;
+  color: white;
+  border-radius: 40px;
+  font-size: 15px;
+  cursor: pointer;
+  box-shadow: 0 0 25px #ff62b277;
+  transition: .3s;
+}
+
+.btn:hover {
+  transform: scale(1.08);
+  box-shadow: 0 0 40px #ff62b2;
+}
+
+.heading {
+  font-family: 'Great Vibes', cursive;
+  font-size: clamp(45px, 9vw, 75px);
+  color: #ffb5dc;
+  margin-bottom: 25px;
+}
+
+.message {
+  max-width: 750px;
+  margin: auto;
+  padding: 35px;
+  line-height: 2;
+  font-size: 16px;
+  color: #f6dff0;
+  border: 1px solid #ff8bca55;
+  border-radius: 25px;
+  background: #ffffff0b;
+  backdrop-filter: blur(12px);
+  box-shadow: 0 0 35px #e45ca522;
+}
+
+.gallery {
+  max-width: 1000px;
+  margin: 35px auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(220px,1fr));
+  gap: 22px;
+}
+
+.photo {
+  height: 280px;
+  border-radius: 20px;
+  overflow: hidden;
+  border: 1px solid #ff9bd255;
+  background: #24152f;
+  transition: .4s;
+}
+
+.photo:hover {
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 0 0 30px #ff62b255;
+}
+
+.photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.caption {
+  color: #ffb4dd;
+  margin-top: 12px;
+}
+
+.surprise {
+  display: none;
+  max-width: 750px;
+  margin: 35px auto;
+  padding: 35px;
+  background: linear-gradient(135deg,#642c70,#321e58);
+  border: 1px solid #ffb4dd;
+  border-radius: 25px;
+  line-height: 2;
+  animation: appear 1s ease;
+}
+
+footer {
+  padding: 40px 20px;
+  color: #d5a5ca;
+  text-align: center;
+}
+
+.heart {
+  position: fixed;
+  bottom: -50px;
+  animation: float 7s linear infinite;
+  pointer-events: none;
+  z-index: 5;
+}
+
+@keyframes float {
+  to {
+    transform: translateY(-110vh) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+#confetti {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 10;
+}
+</style>
+</head>
+
+<body>
+
+<div class="stars"></div>
+<canvas id="confetti"></canvas>
+
+<!-- OPENING -->
+<section class="hero">
+  <p class="small">A special movie for someone special</p>
+
+  <h1>Neha ❤️</h1>
+
+  <h2>YOUR DAY. YOUR MAGIC. YOUR STORY.</h2>
+
+  <p style="margin-top:25px;color:#f4b8dd">
+    Some people make life more beautiful...
+    You're one of them. ✨
+  </p>
+
+  <button class="btn"
+    onclick="document.getElementById('birthday').scrollIntoView()">
+    Begin Your Surprise ↓
+  </button>
+</section>
+
+<!-- BIRTHDAY MESSAGE -->
+<section id="birthday">
+  <p class="small">THE MAIN CHARACTER</p>
+  <h2 class="heading">Happy Birthday Neha!</h2>
+
+  <div class="message">
+    Dear Neha, 💗
+
+    <br><br>
+
+    Today isn't just another day.
+    Today is the day someone truly amazing
+    came into this world.
+
+    <br><br>
+
+    I hope your life is always filled with
+    happiness, laughter, love and unforgettable
+    memories.
+
+    Thank you for being such a wonderful friend.
+    Never stop smiling, never stop dreaming
+    and never forget how special you are.
+
+    <br><br>
+
+    You deserve every beautiful thing
+    this universe has to offer.
+
+    <br><br>
+
+    <b>Happy Birthday once again, Neha! ❤️</b>
+  </div>
+</section>
+
+<!-- PHOTO GALLERY -->
+<section>
+  <p class="small">LITTLE MOMENTS, BIG MEMORIES</p>
+  <h2 class="heading">Our Memories 📸</h2>
+
+  <div class="gallery">
+
+    <!-- Replace these images with your own -->
+    <div>
+      <div class="photo">
+        <img src="photo1.jpg" alt="Memory 1">
+      </div>
+      <p class="caption">Beautiful memories ✨</p>
+    </div>
+
+    <div>
+      <div class="photo">
+        <img src="photo2.jpg" alt="Memory 2">
+      </div>
+      <p class="caption">Crazy moments 💕</p>
+    </div>
+
+    <div>
+      <div class="photo">
+        <img src="photo3.jpg" alt="Memory 3">
+      </div>
+      <p class="caption">Forever unforgettable 🌷</p>
+    </div>
+
+    <div>
+      <div class="photo">
+        <img src="photo4.jpg" alt="Memory 4">
+      </div>
+      <p class="caption">The best times ❤️</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- SURPRISE -->
+<section>
+  <p class="small">ONE LAST THING...</p>
+  <h2 class="heading">A Little Surprise 🎁</h2>
+
+  <p style="color:#e9c4e5">
+    There's something I want you to see...
+  </p>
+
+  <button class="btn" onclick="reveal()">
+    OPEN YOUR SURPRISE 💝
+  </button>
+
+  <div class="surprise" id="surprise">
+    <h2 class="heading">For You, Neha ❤️</h2>
+
+    <p>
+      If I could gift you one thing in this world,
+      it would be the ability to see yourself
+      through my eyes.
+
+      <br><br>
+
+      Then you'd understand how precious,
+      wonderful and irreplaceable you are.
+
+      <br><br>
+
+      Keep shining, birthday girl! 🌙
+
+      <br><br>
+
+      <b>YOU ARE A WHOLE VIBE! 💗</b>
+    </p>
+  </div>
+</section>
+
+<footer>
+  Made with ❤️, just for Neha.
+
+  <br><br>
+  © A birthday she'll never forget ✨
+</footer>
+
+<script>
+function reveal() {
+  document.getElementById("surprise").style.display = "block";
+
+  document.getElementById("surprise").scrollIntoView({
+    behavior: "smooth",
+    block: "center"
+  });
+
+  launchConfetti();
+}
+
+function launchConfetti() {
+  const canvas = document.getElementById("confetti");
+  const ctx = canvas.getContext("2d");
+
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
+
+  let pieces = [];
+
+  for(let i = 0; i < 180; i++) {
+    pieces.push({
+      x: Math.random() * canvas.width,
+      y: -Math.random() * canvas.height,
+      size: Math.random() * 8 + 3,
+      speed: Math.random() * 5 + 2,
+      color: ["#ff62b2","#ffd166","#b56cff","#ffffff"][
+        Math.floor(Math.random()*4)
+      ]
+    });
+  }
+
+  let frame = 0;
+
+  function animate() {
+    ctx.clearRect(0,0,canvas.width,canvas.height);
+
+    pieces.forEach(p => {
+      ctx.fillStyle = p.color;
+      ctx.fillRect(p.x,p.y,p.size,p.size);
+      p.y += p.speed;
+      p.x += Math.sin(p.y/30);
+    });
+
+    frame++;
+
+    if(frame < 220) requestAnimationFrame(animate);
+    else ctx.clearRect(0,0,canvas.width,canvas.height);
+  }
+
+  animate();
+}
+
+// Floating hearts
+setInterval(() => {
+  const heart = document.createElement("div");
+  heart.className = "heart";
+  heart.innerHTML = ["💗","✨","💕","🌸"][
+    Math.floor(Math.random()*4)
+  ];
+
+  heart.style.left = Math.random()*100 + "vw";
+  heart.style.fontSize = (15+Math.random()*25) + "px";
+  heart.style.animationDuration = (5+Math.random()*5) + "s";
+
+  document.body.appendChild(heart);
+
+  setTimeout(() => heart.remove(),10000);
+},700);
+
+window.addEventListener("resize", () => {
+  const canvas = document.getElementById("confetti");
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
+});
+</script>
+
+</body>
+</html>
